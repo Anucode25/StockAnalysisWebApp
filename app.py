@@ -46,7 +46,8 @@ url = "https://yfapi.net/v6/finance/quote"
 querystring = {"symbols":tickerSymbol}
 
 headers = {
-    'x-api-key': "Toofd1ilgM17WtNli9jbI73z44pQcbjftzkrnW7b"
+    'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com",
+    'x-rapidapi-key': "Toofd1ilgM17WtNli9jbI73z44pQcbjftzkrnW7b"
     }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
