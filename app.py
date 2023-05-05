@@ -39,6 +39,18 @@ yf.pdr_override()
 tickerlist= pd.read_csv('list.csv') 
 tickerSymbol = st.sidebar.selectbox(
     'Choose the Stock Ticker',tickerlist)
+def fetch_data(symbol):
+    api_key = "cEibm7rY"
+    url = f"https://query1.finance.yahoo.com/v7/finance/quote?formatted=true&lang=en-US&symbols={symbol}&apikey={api_key}"
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise Exception("Failed to fetch data from Yahoo Finance API")
+    json_response = response.json()
+    stock_data = json_response['quoteResponse']['result'][0]
+    return stock_data
+
+fetch_data(tickerSymbol)
+
 #ticker main page
 df= yf.download(tickerSymbol,start_date,end_date)
 if df.empty:
