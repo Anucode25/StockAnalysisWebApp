@@ -42,7 +42,7 @@ tickerlist= pd.read_csv('list.csv')
 tickerSymbol = st.sidebar.selectbox(
     'Choose the Stock Ticker',tickerlist)
 def fetch_data(symbol):
-    api_key = "cEibm7rY"
+    api_key = "dj0yJmk9Y0N3QjNCSmdSczFpJmQ9WVdrOVkwVnBZbTAzY2xrbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PThm"
     url = f"https://query1.finance.yahoo.com/v7/finance/quote?formatted=true&lang=en-US&symbols={symbol}&apikey={api_key}"
     response = requests.get(url)
     if response.status_code != 200:
