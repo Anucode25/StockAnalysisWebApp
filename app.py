@@ -9,6 +9,8 @@ from keras.models import load_model
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
 import datetime as datetime
+import requests
+
 #setting the favicon and title of page
 st.set_page_config(page_title="Stock Nerd", page_icon=":chart_with_upwards_trend:", layout="wide")
 
