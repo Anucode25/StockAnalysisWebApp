@@ -1,6 +1,6 @@
 # StockAnalysisWebApp
 The stock nerd is stock analysis web app made using streamlit.
-Technologies used are:-
+# Technologies used are:-
  python
   -numpy
   -pandas
