@@ -41,7 +41,7 @@ yf.pdr_override()
 tickerlist= pd.read_csv('list.csv') 
 tickerSymbol = st.sidebar.selectbox(
     'Choose the Stock Ticker',tickerlist)
-url = "https://yfapi.net/v6/finance/quote"
+url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes"
 
 querystring = {"symbols":tickerSymbol}
 
