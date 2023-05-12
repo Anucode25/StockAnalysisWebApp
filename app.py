@@ -41,18 +41,7 @@ yf.pdr_override()
 tickerlist= pd.read_csv('list.csv') 
 tickerSymbol = st.sidebar.selectbox(
     'Choose the Stock Ticker',tickerlist)
-url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes"
 
-querystring = {"symbols":tickerSymbol}
-
-headers = {
-    'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com",
-    'x-rapidapi-key': "Toofd1ilgM17WtNli9jbI73z44pQcbjftzkrnW7b"
-    }
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-print(response.text)
 
 #ticker main page
 df= yf.download(tickerSymbol,start_date,end_date)
